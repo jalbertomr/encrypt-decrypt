@@ -30,4 +30,16 @@ public class EncryptDecryptRSAController {
   public String decryptMessage(@RequestBody String encryptString) {
     return encryptDecryptService.decryptMessage(encryptString);
   }
+
+  @PostMapping("/encryptsharsa")
+  public String encryptMessageSHARSA(@RequestBody String plainString) {
+    return encryptDecryptService.sellarDigitalSHARSA(plainString);
+  }
+
+
+  @PostMapping("/decryptsharsa")
+  public String decryptMessageSHARSA(@RequestBody String encryptString) {
+    return encryptDecryptService.verificarSelloSHARSA(encryptString);
+  }
+
 }
